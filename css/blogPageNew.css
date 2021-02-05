@@ -181,8 +181,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.icon
+.icons
 {
-    font-size: 40px;
-    background-color: grey;
+    font-size: 30px;
 }
