@@ -24,16 +24,16 @@
         <div class = "heading">
             <div class = "heading-text">Blogs</div>
         </div>
-        <div class = "row">
+        <div class = "row" id = "row1">
             <div class ="blog-img">
                 <img src="https://firebasestorage.googleapis.com/v0/b/project-manager-35108.appspot.com/o/Rectangle%204.png?alt=media&token=9334d39a-ba2e-428e-8dc6-a1b65ef73872" alt="Project Image">
             </div>
             <div class = "blog">
                 <div class = "blog-heading">The Lovely Star</div>
-                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?
+                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur dignissimos, accusantium deleniti magnam voluptatem voluptas rem, autem quo illum dolorem aperiam harum. Dignissimos, assumenda qui. Enim culpa molestias accusantium!
                 </div>
                 <div class = "read-more">
-                    <a href ='#'>Read More</a> 
+                    <div>Read More</div> 
                 </div>
             </div>
             <div class="links">
@@ -45,16 +45,16 @@
                 </div>
             </div>
         </div>    
-        <div class = "row">
+        <div class = "row" id = "row2">
             <div class ="blog-img">
                 <img src="https://firebasestorage.googleapis.com/v0/b/project-manager-35108.appspot.com/o/Rectangle%204.png?alt=media&token=9334d39a-ba2e-428e-8dc6-a1b65ef73872" alt="Project Image">
             </div>
             <div class = "blog">
                 <div class = "blog-heading">The Lovely Star</div>
-                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?
+                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, laboriosam voluptatem cupiditate aperiam odio optio recusandae modi magni? Possimus fugit reiciendis, vel expedita delectus eaque sit at neque pariatur dolorum.
                 </div>
                 <div class = "read-more">
-                    <a href ='#'>Read More</a> 
+                    <div>Read More</div> 
                 </div>
             </div>
             <div class="links">
@@ -66,16 +66,16 @@
                 </div>
             </div>
         </div>
-        <div class = "row">
+        <div class = "row" id = row3>
             <div class ="blog-img">
                 <img src="https://firebasestorage.googleapis.com/v0/b/project-manager-35108.appspot.com/o/Rectangle%204.png?alt=media&token=9334d39a-ba2e-428e-8dc6-a1b65ef73872" alt="Project Image">
             </div>
             <div class = "blog">
                 <div class = "blog-heading">The Lovely Star</div>
-                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?
+                <div class = "blog-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis beatae voluptatibus assumenda! Dolor nesciunt numquam magnam ipsum sit doloremque, quod aliquid ratione minus! Mollitia, alias ea? Magni dolorem hic quia?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non aspernatur mollitia ea hic adipisci maxime, similique vitae aliquid earum, facilis architecto, fugit exercitationem? Doloremque culpa quidem, quae sapiente eos modi?
                 </div>
                 <div class = "read-more">
-                    <a href ='#'>Read More</a> 
+                    <div>Read More</div> 
                 </div>
             </div>
             <div class="links">
@@ -90,6 +90,22 @@
     </div>
     </body>
     <script>
-        var readMore = document.querySelectorAll(".readMore");
+        var readMore = document.querySelectorAll(".read-more");
+        for(var i=0;i<readMore.length;i++)
+        {
+            var element = readMore[i];
+            element.addEventListener('click', function()
+            {
+                element.previousElementSibling.classList.toggle("showMore");
+                if(element.previousElementSibling.contains('showMore')==true)
+                {
+                    element.children[0].innerText = 'Show Less';
+                }
+                else
+                {
+                    element.children[0].innerText = 'Show Less';
+                }
+            })
+        }
     </script>
     </html>
